@@ -1,0 +1,452 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.alinhamento {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto
+}
+
+.tela-principal {
+    width: 100%;
+    height: 100vh;
+    background: url('/img/backgrouds.jpg') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: color;
+}
+
+.titulo {
+    position: fixed;
+    color: white;
+
+}
+
+.titulo h1 {
+    font-size: 2vw;
+}
+
+
+.jogar {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.jogar img {
+    max-width: 80%;
+}
+
+.jogar h1 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    font: normal 48px/normal "Warnes", Helvetica, sans-serif;
+    color: #03e9f4;
+    text-decoration: normal;
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    white-space: pre;
+    text-shadow: 0 0 10px blue, 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de;
+}
+
+/*estilo do botão*/
+
+
+
+.neon-bt {
+
+    position: relative;
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    color: #03e9f4;
+
+    font-size: 1.7vw;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    overflow: hidden;
+
+    transition: 0.2s;
+
+    margin-top: 40px;
+
+    letter-spacing: 4px
+}
+
+
+
+.neon-bt:hover {
+
+    background: #03e9f4;
+
+    color: #fff;
+
+    border-radius: 5px;
+
+    box-shadow: 0 0 5px #03e9f4,
+
+        0 0 25px #03e9f4,
+
+        0 0 50px #03e9f4,
+
+        0 0 100px #03e9f4;
+
+}
+
+
+
+
+
+/*animação do span para criar linhas*/
+
+
+
+
+
+.neon-bt span {
+
+    position: absolute;
+
+    display: block;
+
+}
+
+
+
+
+
+/*span 1*/
+
+.neon-bt span:nth-child(1) {
+
+    top: 0;
+
+    left: -100%;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: linear-gradient(90deg, transparent, #03e9f4);
+
+    animation: btn-anim1 1s linear infinite;
+
+}
+
+
+
+@keyframes btn-anim1 {
+
+    0% {
+
+        left: -100%;
+
+    }
+
+    50%,
+    100% {
+
+        left: 100%;
+
+    }
+
+}
+
+
+
+/*span 2*/
+
+.neon-bt span:nth-child(2) {
+
+    top: -100%;
+
+    right: 0;
+
+    width: 2px;
+
+    height: 100%;
+
+    background: linear-gradient(180deg, transparent, #03e9f4);
+
+    animation: btn-anim2 1s linear infinite;
+
+    animation-delay: .25s
+}
+
+
+
+@keyframes btn-anim2 {
+
+    0% {
+
+        top: -100%;
+
+    }
+
+    50%,
+    100% {
+
+        top: 100%;
+
+    }
+
+}
+
+
+
+
+
+/*span 3*/
+
+
+
+.neon-bt span:nth-child(3) {
+
+    bottom: 0;
+
+    right: -100%;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: linear-gradient(270deg, transparent, #03e9f4);
+
+    animation: btn-anim3 1s linear infinite;
+
+    animation-delay: .5s
+}
+
+
+
+@keyframes btn-anim3 {
+
+    0% {
+
+        right: -100%;
+
+    }
+
+    50%,
+    100% {
+
+        right: 100%;
+
+    }
+
+}
+
+
+
+/*span 4*/
+
+
+
+.neon-bt span:nth-child(4) {
+
+    bottom: -100%;
+
+    left: 0;
+
+    width: 2px;
+
+    height: 100%;
+
+    background: linear-gradient(360deg, transparent, #03e9f4);
+
+    animation: btn-anim4 1s linear infinite;
+
+    animation-delay: .75s;
+}
+
+
+
+@keyframes btn-anim4 {
+
+    0% {
+
+        bottom: -100%;
+
+    }
+
+    50%,
+    100% {
+
+        bottom: 100%;
+
+    }
+
+}
+
+.tela-menu-jogo-Velha {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.jogo-Velha {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.jogo-Velha div {
+    width: 31%;
+    height: 31%;
+    margin: 1%;
+    background-color: rgba(0, 0, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jogo-Velha div:hover {
+    background-color: rgba(0, 0, 255, 0.9);
+}
+
+.classBola {}
+
+.classX {}
+
+div>.jogadaX {
+    width: 0%;
+    height: 0%;
+    background: url('/img/X.png') no-repeat center center/cover;
+    animation-name: animandoX;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animandoX {
+    from {
+        width: 0%;
+        height: 0%;
+        transform: rotatez(90deg);
+    }
+
+    to {
+        width: 100%;
+        height: 100%;
+        transform: rotatez(180deg);
+    }
+}
+
+div>.jogadaO {
+    width: 0%;
+    height: 0%;
+    background: url('/img/O.png') no-repeat center center/cover;
+    animation-name: animandoO;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animandoO {
+    from {
+        width: 0%;
+        height: 0%;
+        transform: rotatey(0deg);
+    }
+
+    to {
+        width: 100%;
+        height: 100%;
+        transform: rotatey(180deg);
+    }
+}
+
+.vencedor {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    z-index: 1;
+}
+
+.neon-bt p {
+    font-size: 7vw;
+}
+
+.vencedor-jogador01 {
+    display: none;
+}
+
+.vencedor-jogador02 {
+    display: none;
+}
+
+.vencedor-empate {
+    display: none;
+}
+
+.audio {
+    width: 300px;
+    left: -300px;
+    position: fixed;
+    background-color: red;
+    z-index: 0;
+}
+
+@media (min-width: 0px) and (max-width: 800px) {
+    .jogo-Velha {
+        width: 100%;
+        height: 60%;
+    }
+
+    div>.jogadaX {
+        background: url('/img/X-resposivo.png') no-repeat center center/cover;
+    }
+
+    div>.jogadaO {
+        background: url('/img/O-responsivo.png') no-repeat center center/cover;
+
+    }
+
+    .titulo {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .titulo h1 {
+        font-size: 4vw;
+    }
+
+    .neon-bt {
+        font-size: 3.2vw;
+    }
+}
